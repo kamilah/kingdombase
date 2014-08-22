@@ -16,6 +16,7 @@ gem 'devise_invitable'
 gem 'pundit'
 gem 'simple_form'
 gem 'thin'
+gem 'font-awesome-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

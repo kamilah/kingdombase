@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Kingdombase" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Kingdombase" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Kingdom" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Kingdom" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -12,9 +12,29 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">C O M M U N I T Y<i class="fa fa-chevron-right"></i></a></li>
+            <li><a href="<%= posts_path %>">B U L L E T I N<i class="fa fa-chevron-right"></i></a></li>
+            <li><a href="#">R E S O U R C E S<i class="fa fa-chevron-right"></i></a></li>
+            <li><a href="#">M E R C H A N T <sp> U</sp><i class="fa fa-chevron-right"></i></a></li>
+          </ul>
+         
+        </div>
     <main role="main">
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          
        <%= render 'layouts/messages' %>
-       <%= yield %>
+      <%= yield %>
+       
+      </div>
+        </div>
+      </div>
     </main>
+    
   </body>
 </html>
